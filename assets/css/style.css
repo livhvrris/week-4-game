@@ -1,0 +1,58 @@
+/* GENERAL */
+body {
+    background-color: black;
+/*    background-image: url("paper.gif");*/
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+
+
+/* HEADER */
+header {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 72px;
+}
+
+/* INSTRUCTIONS */
+#instructions {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* RANDOM NUMBER */
+#randomNumber {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+/* STATS */
+#stats {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* CRYSTALS */
+.crystal {
+	height: 250px;
+	width: 250px;
+}
+
+#crystalsSection {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* SCOREBOARD */
+#scoreHeader {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#score {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}

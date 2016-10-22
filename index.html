@@ -3,88 +3,53 @@
 <head>
 	<meta charset="UTF-8">
 
+	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Codystar:300" rel="stylesheet">
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-	<title>Psychic Game</title>
+	<title>Crystals Collector - Game</title>
 
 </head>
 <body>
+	<header>
+		<h1>Crystals Collector!</h1>
+	</header>
 
-	<h1>The Psychic Game</h1>
-	<p>Guess what letter I'm thinking of...</p>
-	<br>
-		<ul id="wins">Wins: 0</ul>
-		<ul id="losses">Losses: 0</ul>
-		<ul id="guesses-left">Guesses Left: 0</ul>
-		<ul id="guesses-so-far">Your Guesses So Far: 0</ul>
+	<div id="instructions">
+		<p>You will be given a random number at the start of the game.</p>
+		<p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score</p>
+		<p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+		<p>The value of each crystal is hidden from you until you click on it.</p>
+		<p>Each time the game starts, it will change the value of each crystal</p>
+	</div>
+	
+	<div id="randomNumber"></div>
 
-	<script type="text/javascript">
+	<div id="stats">
+		<ul id="wins">Wins:</ul>
+		<ul id="wins">Losses:</ul>
+	</div>
 
-		var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+	<div id="crystalsSection">
+		<img class="crystal" id="crystalOne" src="assets/images/crystalOne.png" alt="Crystal One">
+		<img class="crystal" id="crystalTwo" src="assets/images/crystalTwo.png" alt="Crystal Two">
+		<img class="crystal" id="crystalThree" src="assets/images/crystalThree.png" alt="Crystal Three">
+		<img class="crystal" id="crystalFour" src="assets/images/crystalFour.png" alt="Crystal Four">
+	</div>
 
-		var computerPick = letters[Math.floor(Math.random() * letters.length)];
-		console.log(computerPick);
+	<div id="scoreHeader">
+		<h3>Your Total Score Is:</h3>
+	</div>
+
+	<div id="score"></div>
 
 
-		var wins = 0;
-		var losses = 0;
+	<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="assets/javascript/game.js"></script>
 
-		var guessesLeft = 10;
-		var guessesSoFar = [];
-
-
-		for (var i = 0; i < computerPick.length; i++) {
-			
-			psychicGame(i)
-
-			// Restarting Loop should maintain count of wins and losses, and set guessesLeft back to 10 and set guessesSoFar to nothing... In the meantime, I'll just make the document reload when the game is over...
-
-		}
-
-		function psychicGame(i){
-
-	 		document.onkeyup = function(event){
-			var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
-				if (userGuess == computerPick) {
-						
-					alert("You Win!");
-					wins = wins + 1;
-
-					document.getElementById("wins").innerHTML = "Wins: " + wins;
-					
-					location.reload();
-
-				} else { 
-						
-					guessesLeft = guessesLeft - 1;
-
-					guessesSoFar.push(userGuess)
-
-					document.getElementById("guesses-left").innerHTML = "Guesses Left: " + guessesLeft;			
-					document.getElementById("guesses-so-far").innerHTML = "Your Guesses So Far: " + guessesSoFar;
-
-				}
-
-				if (guessesLeft == 0) {	
-
-					alert("You Lose!");					
-					losses = losses + 1
-		
-					document.getElementById("losses").innerHTML = "Losses: " + losses;
-					document.getElementById("guesses-left").innerHTML = "Guesses Left: 0";
-
-					location.reload();
-
-				}
-
-			}
-		}
-
-	</script>
 </body>
 </html>
