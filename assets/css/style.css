@@ -4,13 +4,13 @@ body {
 /*    background-image: url("paper.gif");*/
 	font-family: 'Roboto', sans-serif;
 	color: white;
+	text-align: center;
 }
-
 
 /* HEADER */
 header {
 	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 50px;
 }
 
 h1 {
@@ -18,41 +18,60 @@ h1 {
 	font-size: 72px;
 }
 
-/* INSTRUCTIONS */
-#instructions {
+/* RANDOM NUMBER (SECTION) */
+#randomNumberSection {
+	display: block;
 	margin-top: 15px;
 	margin-bottom: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+    border: 1px solid #ddd;
 }
 
-/* RANDOM NUMBER */
 #randomNumber {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	font-size: 72px;
 }
-/* STATS */
+
+/* SCOREBOARD */
+#score {
+	display: inline-block;
+/*	float: left;*/
+/*	position: relative;*/
+	width: 25%;
+	height: 25%;
+    border: 1px solid #ddd;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+	/* STATS */
 #stats {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	display: inline-block;
+/*	float: left;*/
+/*	position: relative;*/
+	width: 25%;
+	height: 25%;
+   	border: 1px solid #ddd;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 /* CRYSTALS */
 .crystal {
-	height: 250px;
-	width: 250px;
+	height: 150px;
+	width: 150px;
 }
 
 #crystalsSection {
+	display: block;
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
 
-/* SCOREBOARD */
-#scoreHeader {
+/* INSTRUCTIONS */
+#instructions {
+	display: block;
 	margin-top: 15px;
 	margin-bottom: 15px;
-}
-
-#score {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	font-size: 12px;
 }
