@@ -13,23 +13,25 @@ function crystalCollectorGame() {
 	var crystalOne = Math.floor((Math.random() * 25) + 10);
 	var crystalTwo = Math.floor((Math.random() * 25) + 10);
 	var crystalThree = Math.floor((Math.random() * 25) + 10);
-	var crystalFour = Math.floor((Math.random() * 25) + 10); 
+	var crystalFour = Math.floor((Math.random() * 25) + 10);
+
+	$("#crystalOne").on("click", function(){
+		score = score + crystalOne;
+		$('#score').html('<h2> Your Total: <br>' + '<h1>' + score + '</h1>' + '</h2>');
+	});
+	$("#crystalTwo").on("click", function(){
+		score = score + crystalTwo;
+		$('#score').html('<h2> Your Total: <br>' + '<h1>' + score + '</h1>' + '</h2>');
+	});
+	$("#crystalThree").on("click", function(){
+		score = score + crystalThree;
+		$('#score').html('<h2> Your Total: <br>' + '<h1>' + score + '</h1>' + '</h2>');
+	});
+	$("#crystalFour").on("click", function(){
+		score = score + crystalFour;
+		$('#score').html('<h2> Your Total: <br>' + '<h1>' + score + '</h1>' + '</h2>');
+	});
 
 }
 
 crystalCollectorGame();
-
-
-
-$("#crystalOne").on("click", function(){
-	console.log("!")
-});
-$("#crystalTwo").on("click", function(){
-	console.log("!!")
-});
-$("#crystalThree").on("click", function(){
-	console.log("!!!")
-});
-$("#crystalFour").on("click", function(){
-	console.log("!!!!")
-});
