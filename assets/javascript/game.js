@@ -1,14 +1,35 @@
 var wins = 0;
 var losses = 0;
 
-function crystalCollectorGame() {
+var score = 0;
 
-	var minimumNumber = 20;
-    var randomNumber = Math.floor((Math.random() * 100) + 10);
-
-    var score = 0;
+function valueSetup() {
     
+    var randomNumber = Math.floor((Math.random() * 100) + 10);
     $('#randomNumber').html('<h2>' + randomNumber + '</h2>');
+
+	$('#score').html('<h2> Your Total: <br></h2> <h1>0</h1>');
+
+}
+
+valueSetup();
+
+function winOrLose() {
+	if (score > randomNumber) {
+		alert('BUST! You Lose!');
+		losses++;
+		console.log(losses);
+	}
+	else if (score == randomNumber) {
+		alert('You Win!');
+		wins++;
+		console.log(wins);
+	}
+}
+
+winOrLose();
+
+function crystalCollectorGame() {
 
 	var crystalOne = Math.floor((Math.random() * 25) + 10);
 	var crystalTwo = Math.floor((Math.random() * 25) + 10);
